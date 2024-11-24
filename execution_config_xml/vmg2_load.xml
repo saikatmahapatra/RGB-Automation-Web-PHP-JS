@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfg>
+<channel>	
+	<tc_selected>VMG1_RPC_22-1468</tc_selected>
+	<tc_selected>VMG1_RPC_23-1468</tc_selected>
+	<tc_selected>VMG1_RPC_28-1468</tc_selected>
+</channel>
+<deviceconfig>	
+	<tc_selected>VMG1_RPC_6-1424</tc_selected>
+	<tc_selected>VMG1_RPC_9-1424</tc_selected>		
+</deviceconfig>
+</cfg>

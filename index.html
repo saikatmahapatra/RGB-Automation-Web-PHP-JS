@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<head>
+<title>RGB Automation</title>
+<link rel="icon" href="rgbfav.ico" />
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        
+        $("#login").click(function() {
+				//alert("hi");
+                var action = $("#form1").attr('action');
+                var form_data = {
+                        username: $("#username").val(),
+                        password: $("#password").val(),
+                        is_ajax: 1
+                };
+                
+                $.ajax({
+                        type: "POST",
+                        url: action,
+                        data: form_data,
+                        success: function(response)
+                        {
+                                //alert(response);
+                                if(response == 'success')
+                                        /*$("#form1").slideUp('slow', function() {
+                                                $("#message").html();
+                                        });*/
+                                        //window.location.href = "home.php";
+                                        window.location.href = "select_device.php";
+                                else
+                                        $("#message").html("<p class='error'>Invalid username and/or password.</p>");
+                                        $("#message").html($nodeusername);
+                        }
+                });
+                
+                return false;
+        });
+        
+});
+</script>
+<link rel="stylesheet" href="cssfiles/style-new.css" media="all"/>
+</head>
+<body>
+
+<table width="100%">
+<tr>
+<td align="left" valign="top" class="logo_bg"><img align="top" alt="Logo" src="../resources/images/rbgLogo-lg.png"/></td>
+</tr>
+<tr>
+<td align="left" valign="top" class="app_title">RGB Automation</td>
+</tr>
+  <tr id="breadcrumb_holder">
+    <td colspan="3" valign="top" align="left">
+    <div class="top-border">&nbsp;</div>
+    </td>
+  </tr>
+</table>
+
+<div class="loginContainer">
+<form id="form1" name="form1" method="post" action="doLogin.php">
+<h3>Please provide username and	password</h3>
+<div id="message"></div> 
+<div class="table">
+ 
+  <div class="rowGroup">
+    <div class="row">
+      <div class="cell"><label for="username"><strong>Username :</strong> </label>&nbsp;&nbsp;</div>
+      <div class="cell"><input type="text" class="login-control" name="username" id="username" value=""></div>      
+    </div>
+  </div>
+  <br>
+  <div class="rowGroup">
+    <div class="row">
+      <div class="cell"><label for="password"><strong>Password : </strong></label></div>
+      <div class="cell"><input type="password" class="login-control" name="password" id="password" value=""></div>      
+    </div>
+    <br>
+    <div class="row">
+      <div class="cell">&nbsp;</div>
+      <div class="cell"><input type="submit" name="login" id="login" value="Login"></div>      
+    </div>
+  </div>
+  
+</div>
+</form>
+</div>
+
+</body>
+</html>

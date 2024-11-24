@@ -1,0 +1,99 @@
+<?php
+/*
+ * Error Handling
+ */
+error_reporting(0);
+
+
+/*
+ * Constants
+ */
+//echo $_SERVER['DOCUMENT_ROOT'];
+//echo '<pre>';
+//print_r($_SERVER[SCRIPT_FILENAME]);
+$user_dir = explode('/public_html',$_SERVER['SCRIPT_FILENAME']);
+//sprint_r($user_dir[0]);
+
+define('DS',DIRECTORY_SEPARATOR);
+define('AUTOMATION_DIR', $user_dir[0].DS.'public_html/automation'); //the main test folder containing vmg/version/compo
+define('COMPONENT_DIR', 'components'.DS);
+define('TEST_DIR', 'tests'.DS);
+define('CONFIG_DIR', 'cfg'.DS.'main_cfgs'.DS);
+define('TEST_CASE_DIR', 'testcases'.DS);
+define('EXECUTION_CONFIG_DIR', 'execution_config_xml');
+
+define('TPL_USER_CFG_PATH', 'includes/tpl_user_cfg.xls'); // blank user config file dir
+define('TPL_VMG_CFG_PATH', 'includes/tpl_vmg_cfg.xls'); // blank vmg config file dir
+
+
+
+/*
+ * Exclude Directory Name While reading directory
+ */
+$automation_exclude_dir = array(
+							'.svn',
+							'.',
+							'..',
+							'console_logs',
+							'disk_space',
+							'resources',
+							'shared_lib',
+							'squish',
+							'config',
+							'phptest',
+                            'RGBAutomation',
+							
+);
+$version_exclude_dir = array(
+							'.svn',
+							'.',
+							'..',
+							'cfg',
+							'logs',
+);
+$appconfig_test_component_name = array(
+							'RPC'=>'RPC',
+							'GUI'=>'GUI',
+);
+
+$appconfig_test_label_name = array(
+						'sanity'=>'Sanity Testing',
+						'regression'=>'Regression Testing',
+						'load'=>'Load Testing',
+);
+
+/*
+ * Suite Folder Name to Display at UI page
+ */
+$appconfig_suite_name = array(
+	'channel' => 'Channel',
+	'deviceconfig' =>'Device Config',
+	'deviceinfo'=>'Device Info',
+	'devicereboot'=>'Device Reboot',
+	'devicerestore'=>'Device Restore',
+	'deviceupgrade'=>'Device Upgrade',
+	'deviceuserauth'=>'Device User Authentication',
+	'homepage'=>'Home Page',
+	'deviceredundancy'=>'Device Redundancy',
+	'bcttest'=>'BCT Test',
+	'legacy'=>'Legacy',
+	'loadtest'=>'Load Test',
+);
+	
+	
+/*
+ * Suite Order, to display at Execution page
+ */
+$appconfig_suite_order = array('deviceupgrade',
+								'deviceconfig',
+								'deviceinfo',
+								'channel',
+								'devicerestore',
+								'deviceuserauth',
+								'deviceredundancy',
+								'devicereboot',
+								'homepage',
+								);	
+	
+	
+?>

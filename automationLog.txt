@@ -1,0 +1,233 @@
+Email Sent To: vaibhav.jain@example.com, From: dpaul@example.com, Subject: Automation_generated_Report
+Content-Type: text/html
+
+
+
+<TITLE>VMG Log</TITLE>
+first_range None
+last_range None
+Cleaning up log file
+additionalMails 
+default mails vaibhav.jain@example.com
+Additional mail list without default user ['']
+Additional mail list with default user ['', 'vaibhav.jain@example.com']
+Local current time : Wed Dec  7 04:48:52 2011
+Mail Sent!
+mail sent to 
+Mail Sent!
+mail sent to vaibhav.jain@example.com
+The Build couldnot be retrieved
+local variable 'count' referenced before assignment
+No test case id mentioned so running all the test cases from basicchannel
+**************************from lin.py*********************
+*******************Linux Configuration********************
+{'gige1_mask': '255.255.255.0', 'gige1_ip': '192.168.47.2', 'gige1_status': 'on', 'gige1_gateway': '0.0.0.0'}
+{'gige0_ip': '192.168.47.1', 'gige0_gateway': '0.0.0.0', 'gige0_mask': '255.255.255.0', 'gige0_status': 'on'}
+FTP
+{'gige4_mask': '255.255.255.0', 'gige4_ip': '192.168.37.1', 'gige4_gateway': '0.0.0.0', 'gige4_status': 'on'}
+
+{'gige6_amp': 'check', 'gige6_status': 'on', 'gige6_gateway': '10.100.2.1', 'gige6_ip': '10.100.2.16', 'gige6_mask': '255.255.255.0'}
+10.70.111.61
+0
+0
+0
+48_BC_NUM_MPEG2_SD_248b8806134f82c22d4208c02b104d70
+48_BC_NUM_MPEG2_HD_c6e7e1269942c7c7a21abb66e21512ef
+basicchannel
+/release/sw.tar
+1
+Y_BC_BASE_d14e8dd3765a5bebead4fa3a38ce786a
+
+8
+Mozilla
+100000
+90000
+10
+1500
+
+{'gige7_status': 'on', 'gige7_ip': '10.100.1.16', 'gige7_mask': '255.255.255.0', 'gige7_amp': 'check', 'gige7_gateway': '10.100.1.1'}
+ttran
+
+1
+1381752-009
+Anonymous
+1
+Complete!
+10.70.111.51
+10.32.97.37
+20111207-044853
+VMG_UI_AUTO_LINUX
+3.0.0.46804
+VMG_UI
+pass1234
+anonymous
+ttran
+1
+2
+48_BC_NUM_H264_HD_76783cb44e01c78dd7d0c6a12fcf1b56
+
+10.70.111.21
+6
+{'cardtype_1': 'TCM'}
+10.70.111.61:5
+1
+
+8131
+vaibhav.jain@example.com
+48_BC_NUM_H264_SD_f127e3fe07bc371ac3aaaf9312764f31
+10
+*firefox
+**********************************************************
+False
+basicchannel suite list
+List of Test Cases Files...
+<br>
+[7, 8, 18, 19, 26, 27, 34, 36, 37, 38, 39, 40, 43, 44, 45, 46, 47, 48, 53, 57, 63, 64, 65, 66]
+VMGUI-7_10_Verify_to_add_new_Transcode_channel_mbr.py
+VMGUI-8_10_Verify_to_add_new_Transcode_packager_channel_mbr.py
+VMGUI-18_10_verify_gui_for_gigE1_transcode_channel_mbr.py
+VMGUI-19_10_verify_gui_for_gigE1_transcode_channel_mbr.py
+VMGUI-26_10_verify_redundant_for_gigE1_transcode_channel_mbr.py
+VMGUI-27_10_verify_redundant_for_gigE2_transcode_channel_mbr.py
+VMGUI-34_10_Verify_to_add_output_Transcode_channel_mbr.py
+VMGUI-36_10_Verify_to_delete_output_for_Transcode_channel_mbr.py
+VMGUI-37_10_Verify_to_Delete_Transcode_channel_mbr.py
+VMGUI-38_10_Verify_added_channels_come_again_when_relogging_GUI_mbr.py
+VMGUI-39_10_Verify_Submit_changes_Transcode_channel_mbr.py
+VMGUI-40_10_Verify_Save_Copy_on_Transcode_channel.py
+VMGUI-43_10_verify_input_TS_input_prog_name_mbr.py
+VMGUI-44_10_redundant_across_channel_mbr.py
+VMGUI-45_10_check_longest_prog_list_mbr.py
+VMGUI-46_10_detect_DVB_streams.py
+VMGUI-47_10_detect_ATSC_stream.py
+VMGUI-48_10_start_stop_channel_bitrate_monitor_mbr.py
+VMGUI-53_10_checking_output_pid_mbr.py
+VMGUI-57_10_modify_input_fields_mbr.py
+VMGUI-63_10_disable_gige_activate_redundant_prog_in_use_mbr.py
+VMGUI-64_10_reenable_gige_activate_primary_program_mbr.py
+VMGUI-65_10_delete_output_started_transcode_channel.py
+VMGUI-66_10_delete_started_transcode_channel.py
+from test suite {'gige1': {'gige1_mask': '255.255.255.0', 'gige1_ip': '192.168.47.2', 'gige1_status': 'on', 'gige1_gateway': '0.0.0.0'}, 'gige0': {'gige0_ip': '192.168.47.1', 'gige0_gateway': '0.0.0.0', 'gige0_mask': '255.255.255.0', 'gige0_status': 'on'}, 'protocol': 'FTP', 'gige4': {'gige4_mask': '255.255.255.0', 'gige4_ip': '192.168.37.1', 'gige4_gateway': '0.0.0.0', 'gige4_status': 'on'}, 'count_fail': 0, 'gige6': {'gige6_amp': 'check', 'gige6_status': 'on', 'gige6_gateway': '10.100.2.1', 'gige6_ip': '10.100.2.16', 'gige6_mask': '255.255.255.0'}, 'HOST_IP': '10.70.111.61', 'abort': '0', 'pass': '0', 'fail': '0', 'license_mpge2sd': '48_BC_NUM_MPEG2_SD_248b8806134f82c22d4208c02b104d70', 'license_mpge2hd': '48_BC_NUM_MPEG2_HD_c6e7e1269942c7c7a21abb66e21512ef', 'tsuite_name': 'basicchannel', 'dir_file_name': '/release/sw.tar', 'tproject_id': '1', 'license_base': 'Y_BC_BASE_d14e8dd3765a5bebead4fa3a38ce786a', 'count_pass': 0, 'output_number': '8', 'platformname': 'Mozilla', 'selenium_default_timeout': '100000', 'selenium_page_load': '90000', 'tsuite_id': '10', 'selenium_speed': '1500', 'version': '', 'gige7': {'gige7_status': 'on', 'gige7_ip': '10.100.1.16', 'gige7_mask': '255.255.255.0', 'gige7_amp': 'check', 'gige7_gateway': '10.100.1.1'}, 'vmg_user': 'ttran', 'tcasefilename': '', 'buildid': '108', 'chasis_serial_no': '1381752-009', 'username': 'Anonymous', 'tcm_number': '1', 'success_msg': 'Complete!', 'server_ip': '10.70.111.51', 'vmg_ip': '10.32.97.37', 'timestamp': '20111207-044853', 'testplanname': 'VMG_UI_AUTO_LINUX', 'build_name': '3.0.0.46804', 'tproject_name': 'VMG_UI', 'PASS': 'pass1234', 'password': 'anonymous', 'UNAME': 'ttran', 'status': '1', 'testplanid': '2', 'license_h264hd': '48_BC_NUM_H264_HD_76783cb44e01c78dd7d0c6a12fcf1b56', 'count_abort': 0, 'host_ftp_ip': '10.70.111.21', 'channel_number': '6', 'cardtype': {'cardtype_1': 'TCM'}, 'VNC_IP': '10.70.111.61:5', 'web_execution': '1', 'additional_mails': '', 'hip_port': '8131', 'defaultemail': 'vaibhav.jain@example.com', 'license_h264sd': '48_BC_NUM_H264_SD_f127e3fe07bc371ac3aaaf9312764f31', 'selenium_load_channels': '10', 'browser': '*firefox'}
+7
+7  matched
+1
+['VMGUI-7_10_Verify_to_add_new_Transcode_channel_mbr.py'] testcase list
+VMGUI-7_10_Verify_to_add_new_Transcode_channel_mbr2
+<br>############################TestCase###################<br>Executing VMGUI-7_10_Verify_to_add_new_Transcode_channel_mbr.py
+<br>
+VMGUI-7_10_Verify_to_add_new_Transcode_channel_mbr
+['VMGUI', '7'] 10
+testplanid 2
+<br>
+
+<br>The test case exist in the testlink
+Openning<br>http://10.32.97.37
+<br> from 10.70.111.61
+Login id is selected<br>
+Login password is typed<br>
+Login button clicked<br>
+Waiting 20 sec to load the home page<br>
+Wed Dec  7 04:49:51 2011 Test Passed: Login successfull<br><br>
+Channel tab selected<br>
+Channel tab selected<br>
+Channel name is typed<br>
+channel Workflow is selected<br>
+channel output mode is selected<br>
+Channel add button clicked<br>
+None present_channel
+[u'channelNameEdit__153'] tot_channel
+[u'channelNameEdit__153'] newchannel
+Wed Dec  7 04:51:31 2011 Test Passed: <br>Channel Added id:153<br>
+Channel expanded <br>
+Wed Dec  7 04:51:34 2011 Test Passed: Channel name is showing as Star_rebaca7<br><br>
+Wed Dec  7 04:51:36 2011 Test Passed: Channel workflow is showing as Xcode-MBR<br><br>
+btn-toggle-stop-down
+Wed Dec  7 04:51:39 2011 Test Passed: Channel stopped<br><br>
+Wed Dec  7 04:51:40 2011 Test Passed: Channel status is shown as white color<br><br>
+Wed Dec  7 04:51:44 2011 Test Passed: Arrow button appeared as grey<br><br>
+Wed Dec  7 04:51:47 2011 Test Passed: Square button appeared as red<br><br>
+Wed Dec  7 04:51:50 2011 Test Passed: Input column is comming as blank<br><br>
+Wed Dec  7 04:51:53 2011 Test Passed: Output column is comming as blank<br><br>
+Wed Dec  7 04:51:54 2011 Test Passed: Input is categorised <br><br>
+Wed Dec  7 04:51:56 2011 Test Passed: Output is categorised <br><br>
+timeDelayDelete 10
+Channel tab selected<br>
+Created channel checkbox is clicked<br>
+Channel delete button clicked<br>
+Channel delete confirmation button clicked<br>
+Wed Dec  7 04:52:31 2011 Test Passed: Channel is deleted in 1.52988195419 secs<br><br>
+<br>
+Test passed<br>
+plan2.html 2
+<br>
+1
+0
+<br>
+Testcase id= 7<br>Test Plan id= 2<br>Test Build id = 108<br>Status = p
+<br>Report Result:<br>
+[{'status': True, 'operation': 'reportTCResult', 'message': 'Success!', 'overwrite': False, 'id': '17299'}]
+************************From win.py************************
+*******************Windows Configuration********************
+{'gige1_mask': '255.255.255.0', 'gige1_ip': '192.168.47.2', 'gige1_status': 'on', 'gige1_gateway': '0.0.0.0'}
+{'gige0_ip': '192.168.47.1', 'gige0_gateway': '0.0.0.0', 'gige0_mask': '255.255.255.0', 'gige0_status': 'on'}
+FTP
+{'gige4_mask': '255.255.255.0', 'gige4_ip': '192.168.37.1', 'gige4_gateway': '0.0.0.0', 'gige4_status': 'on'}
+
+{'gige6_amp': 'check', 'gige6_status': 'on', 'gige6_gateway': '10.100.2.1', 'gige6_ip': '10.100.2.16', 'gige6_mask': '255.255.255.0'}
+192.168.50.39
+0
+0
+0
+48_BC_NUM_MPEG2_SD_248b8806134f82c22d4208c02b104d70
+48_BC_NUM_MPEG2_HD_c6e7e1269942c7c7a21abb66e21512ef
+Login
+/release/sw.tar
+1
+Y_BC_BASE_d14e8dd3765a5bebead4fa3a38ce786a
+
+8
+Mozilla
+100000
+90000
+10
+1500
+
+{'gige7_status': 'on', 'gige7_ip': '10.100.1.16', 'gige7_mask': '255.255.255.0', 'gige7_amp': 'check', 'gige7_gateway': '10.100.1.1'}
+ttran
+
+2
+1381752-009
+Anonymous
+1
+Complete!
+10.70.111.51
+10.32.97.37
+20111207-044853
+VMG_UI_AUTO_WIN
+3.0.0.46804
+VMG_UI
+testpassword
+anonymous
+testusername
+0
+3
+48_BC_NUM_H264_HD_76783cb44e01c78dd7d0c6a12fcf1b56
+
+10.70.111.21
+6
+{'cardtype_1': 'TCM'}
+192.168.50.39
+1
+
+8131
+vaibhav.jain@example.com
+48_BC_NUM_H264_SD_f127e3fe07bc371ac3aaaf9312764f31
+10
+*firefox
+************************************************************
+Email Sent To: vaibhav.jain@example.com, From: dpaul@example.com, Subject: Automation_generated_Report
+http://10.70.111.51/~ttran/vmgtest/log20111207-044853.html
+Mail Sent!
+mail sent to 
+Mail Sent!
+mail sent to vaibhav.jain@example.com

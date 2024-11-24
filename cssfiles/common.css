@@ -1,0 +1,13 @@
+/* CSS Document */
+/*body{
+margin:0px;
+}*/
+
+td {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:normal;
+color:#333333;}
+.style1 {font-size:18px; font-style:italic; color:#000; font-family: Georgia, "Times New Roman", Times, serif;}
+.hide{
+	display:none;}

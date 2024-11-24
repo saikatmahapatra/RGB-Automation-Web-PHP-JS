@@ -1,0 +1,148 @@
+Content-Type: text/html
+
+
+
+<TITLE>VMG Log</TITLE>
+All Modules are Imported
+rebacatest
+The log File name is : log20110727-050401
+No test case id mentioned so running all the test cases from sanity
+**************************from lin.py*********************
+*******************Linux Configuration********************
+testplanname :VMG_UI_AUTO_LINUX
+status :1
+buildid :1
+timestamp :20110727-050401
+HOST_IP :10.70.111.61
+abort :0
+tproject_name :VMG_UI
+pass :0
+fail :0
+platformname :Mozilla
+tsuite_name :sanity
+testplanid :2
+tproject_id :1
+selenium_default_timeout :100000
+selenium_page_load :90000
+tsuite_id :10
+selenium_speed :1500
+version :
+web_execution :0
+server_ip :10.70.111.21
+hip_port :4444
+vmg_user :rebacatest
+tcasefilename :
+selenium_load_channels :10
+**********************************************************
+sanity suite list
+sanity: /home2/rebacatest/public_html/cgi-bin/sanity/sanity.py
+List of Test Cases Files...
+<br>
+[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 26, 27, 34, 35, 36, 37, 38, 39, 40, 43, 44, 45, 46, 47, 48]
+VMGUI-7_10_Verify_to_add_new_Transcode_channel.py
+VMGUI-8_10_Verify_to_add_new_Transcode-Package_channel.py
+VMGUI-9_10_Verify_to_add_new_Package_channel.py
+VMGUI-10_10_Verify_to_add_a_Packager_Packager1+Smooth_Streaming.py
+VMGUI-11_10_Verify_to_add_a_Packager_Packager2+Smooth_Streaming.py
+VMGUI-12_10_Verify_to_add_a_Packager_Packager1+Apple_HLS.py
+VMGUI-13_10_Verify_to_add_a_Packager_Packager2+Apple_HLS.py
+VMGUI-14_10_Verify_to_add_a_Packager_Packager1+Adobe_Flash.py
+VMGUI-15_10_Verify_to_add_a_Packager_Packager2+Adobe_Flash.py
+VMGUI-16_10_Verify_to_delete_packager.py
+VMGUI-17_10_Verify_to_delete_Package_channel.py
+VMGUI-18_10_verify_gui_for_gigE1_transcode_channel.py
+VMGUI-19_10_verify_gui_for_gigE2_transcode_channel.py
+VMGUI-26_10_verify_redundant_for_gigE1_transcode_channel.py
+VMGUI-27_10_verify_redundant_for_gigE2_transcode_channel.py
+VMGUI-34_10_Verify_to_add_output_Transcode_channel.py
+VMGUI-35_10_Verify_Bitrate_monitor.py
+VMGUI-36_10_Verify_to_delete_output_for_Transcode_channel.py
+VMGUI-37_10_Verify_to_Delete_Transcode_channel.py
+VMGUI-38_10_Verify_added_channels_come_again_when_relogging_GUI.py
+VMGUI-39_10_Verify_Submit_changes_Transcode_channel.py
+VMGUI-40_10_Verify_Save_Copy_on_Transcode_channel.py
+VMGUI-43_10_verify_input_TS_input_prog_name.py
+VMGUI-44_10_redundant_across_channel.py
+VMGUI-45_10_check_longest_prog_list.py
+VMGUI-46_10_detect_DVB_streams.py
+VMGUI-47_10_detect_ATSC_stream.py
+VMGUI-48_10_start_stop_channel_bitrate_monitor.py
+from test suite {'testplanname': 'VMG_UI_AUTO_LINUX', 'status': '1', 'buildid': '1', 'timestamp': '20110727-050401', 'HOST_IP': '10.70.111.61', 'abort': '0', 'tproject_name': 'VMG_UI', 'pass': '0', 'fail': '0', 'platformname': 'Mozilla', 'tsuite_name': 'sanity', 'testplanid': '2', 'tproject_id': '1', 'selenium_default_timeout': '100000', 'selenium_page_load': '90000', 'tsuite_id': '10', 'selenium_speed': '1500', 'version': '', 'web_execution': '0', 'server_ip': '10.70.111.21', 'hip_port': '4444', 'vmg_user': 'rebacatest', 'tcasefilename': '', 'selenium_load_channels': '10'}
+['VMGUI-7_10_Verify_to_add_new_Transcode_channel.py', 'VMGUI-8_10_Verify_to_add_new_Transcode-Package_channel.py', 'VMGUI-9_10_Verify_to_add_new_Package_channel.py', 'VMGUI-10_10_Verify_to_add_a_Packager_Packager1+Smooth_Streaming.py', 'VMGUI-11_10_Verify_to_add_a_Packager_Packager2+Smooth_Streaming.py', 'VMGUI-12_10_Verify_to_add_a_Packager_Packager1+Apple_HLS.py', 'VMGUI-13_10_Verify_to_add_a_Packager_Packager2+Apple_HLS.py', 'VMGUI-14_10_Verify_to_add_a_Packager_Packager1+Adobe_Flash.py', 'VMGUI-15_10_Verify_to_add_a_Packager_Packager2+Adobe_Flash.py', 'VMGUI-16_10_Verify_to_delete_packager.py', 'VMGUI-17_10_Verify_to_delete_Package_channel.py', 'VMGUI-18_10_verify_gui_for_gigE1_transcode_channel.py', 'VMGUI-19_10_verify_gui_for_gigE2_transcode_channel.py', 'VMGUI-26_10_verify_redundant_for_gigE1_transcode_channel.py', 'VMGUI-27_10_verify_redundant_for_gigE2_transcode_channel.py', 'VMGUI-34_10_Verify_to_add_output_Transcode_channel.py', 'VMGUI-35_10_Verify_Bitrate_monitor.py', 'VMGUI-36_10_Verify_to_delete_output_for_Transcode_channel.py', 'VMGUI-37_10_Verify_to_Delete_Transcode_channel.py', 'VMGUI-38_10_Verify_added_channels_come_again_when_relogging_GUI.py', 'VMGUI-39_10_Verify_Submit_changes_Transcode_channel.py', 'VMGUI-40_10_Verify_Save_Copy_on_Transcode_channel.py', 'VMGUI-43_10_verify_input_TS_input_prog_name.py', 'VMGUI-44_10_redundant_across_channel.py', 'VMGUI-45_10_check_longest_prog_list.py', 'VMGUI-46_10_detect_DVB_streams.py', 'VMGUI-47_10_detect_ATSC_stream.py', 'VMGUI-48_10_start_stop_channel_bitrate_monitor.py'] testcase list
+VMGUI-7_10_Verify_to_add_new_Transcode_channel2
+<br>#####################################TestCase###################################<br>Executing VMGUI-7_10_Verify_to_add_new_Transcode_channel.py
+VMGUI-7_10_Verify_to_add_new_Transcode_channel
+['VMGUI', '7'] 10
+[True]
+2
+<br>
+
+<br>The test case exist in the testlink
+<br><p>Opening http://10.32.97.170
+<br> from 10.70.111.61
+Log Info:<br>loginName : Administrator
+<br>loginPassword : Admin<br>
+log Aborted
+log Aborted
+Wed Jul 27 05:05:54 2011 Test Aborted: ERROR: Command execution failure. Please search the forum at http://clearspace.openqa.org for error details from the log window.  The error message is: Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIFileOutputStream.init]
+Test Aborted<br>
+plan2.html 2
+<br>
+0
+0
+<br>
+Testcase id= 7<br>Test Plan id= 2<br>Test Build id = 1<br>Status = b
+<br>Report Result:<br>
+[{'status': True, 'operation': 'reportTCResult', 'message': 'Success!', 'overwrite': False, 'id': '4234'}]
+VMGUI-8_10_Verify_to_add_new_Transcode-Package_channel2
+<br>#####################################TestCase###################################<br>Executing VMGUI-8_10_Verify_to_add_new_Transcode-Package_channel.py
+VMGUI-8_10_Verify_to_add_new_Transcode-Package_channel
+['VMGUI', '8'] 10
+[True]
+2
+<br>
+
+<br>The test case exist in the testlink
+{'testplanname': 'VMG_UI_AUTO_LINUX', 'status': '1', 'buildid': '1', 'timestamp': '20110727-050401', 'tcase_id': '8', 'HOST_IP': '10.70.111.61', 'abort': 0, 'tproject_name': 'VMG_UI', 'pass': 0, 'fail': 0, 'platformname': 'Mozilla', 'tsuite_name': 'sanity', 'testplanid': '2', 'tproject_id': '1', 'selenium_default_timeout': '100000', 'selenium_page_load': '90000', 'tcase_extid': 'VMGUI-8', 'tsuite_id': '10', 'selenium_speed': '1500', 'version': '', 'web_execution': '0', 'server_ip': '10.70.111.21', 'hip_port': '4444', 'vmg_user': 'rebacatest', 'tcasefilename': 'VMGUI-8_10_Verify_to_add_new_Transcode-Package_channel', 'selenium_load_channels': '10'} SQA
+<br><p>Opening http://10.32.97.170
+<br> from 10.70.111.61
+Log Info:<br>loginName : Administrator
+<br>loginPassword : Admin<br>
+log Aborted
+log Aborted
+Wed Jul 27 05:07:46 2011 Test Aborted: ERROR: Command execution failure. Please search the forum at http://clearspace.openqa.org for error details from the log window.  The error message is: Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIFileOutputStream.init]
+Test Aborted<br>
+plan2.html 2
+<br>
+0
+0
+<br>
+Testcase id= 8<br>Test Plan id= 2<br>Test Build id = 1<br>Status = b
+<br>Report Result:<br>
+[{'status': True, 'operation': 'reportTCResult', 'message': 'Success!', 'overwrite': False, 'id': '4235'}]
+VMGUI-9_10_Verify_to_add_new_Package_channel2
+<br>#####################################TestCase###################################<br>Executing VMGUI-9_10_Verify_to_add_new_Package_channel.py
+VMGUI-9_10_Verify_to_add_new_Package_channel
+['VMGUI', '9'] 10
+[True]
+2
+<br>
+
+<br>The test case exist in the testlink
+<br><p>Opening http://10.32.97.170
+<br> from 10.70.111.61
+Log Info:<br>loginName : Administrator
+<br>loginPassword : Admin<br>
+log Aborted
+log Aborted
+Wed Jul 27 05:09:39 2011 Test Aborted: ERROR: Command execution failure. Please search the forum at http://clearspace.openqa.org for error details from the log window.  The error message is: Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIFileOutputStream.init]
+Test Aborted<br>
+plan2.html 2
+<br>
+0
+0
+<br>
+Testcase id= 9<br>Test Plan id= 2<br>Test Build id = 1<br>Status = b
+<br>Report Result:<br>
+[{'status': True, 'operation': 'reportTCResult', 'message': 'Success!', 'overwrite': False, 'id': '4236'}]
+VMGUI-10_10_Verify_to_add_a_Packager_Packager1+Sm

@@ -1,0 +1,409 @@
+<?php
+session_start();
+$username = $_SESSION['username'];
+if($username == ""){
+        header("location:index.html");
+}
+$requestURL=($_SERVER['REQUEST_URI']);
+$usernameArr=explode('/',$requestURL);
+$hostip = $_SERVER['SERVER_ADDR'];
+$hostipArray = explode('.',$hostip);
+
+//$hostipLastOctet = $hostipArray[3];
+
+$nodeusername=substr($usernameArr[1],1,strlen($usernameArr[1]));
+//$firstParam="/home2/".$username."/public_html/cgi-bin/vmg_lib/cfg".;
+if(isset($_REQUEST['cfg']) && $_REQUEST['cfg']!=""){
+##$firstParam="/home2/".$nodeusername."/public_html/cgi-bin/vmg_lib/server_cfgs_repository/".$username."/server.cfg.".$_REQUEST['cfg'];
+$firstParam="../vmg_lib/server_cfgs_repository/".$username."/server.cfg.".$_REQUEST['cfg'];
+}else{
+#$firstParam="/home2/".$nodeusername."/public_html/cgi-bin/vmg_lib/main_cfgs/server.cfg.".$username;
+$firstParam="server.cfg.".$username;
+}
+
+//if($_REQUEST['cfg']!="" && isset($_REQUEST['cfg'])){
+        // full path to text file
+        define("TEXT_FILE", $firstParam);
+        // number of lines to read from the end of file
+        //define("LINES_COUNT", 10);
+        $handle = fopen(TEXT_FILE, "r");
+        $i=0;
+        $cfgArray=array();
+        while(!feof($handle)){
+        $cfgArray[$i]=fgets($handle);
+        $i+=1;
+        }
+        /*print_r($cfgArray);
+        exit;*/
+        $configArr=array();
+        $count=0;
+        foreach($cfgArray as $value){
+                if(trim($value)!=""){
+                //$configArr[$count]=$value;
+                $matches=array();
+                   if(preg_match_all("/(.*?)\((.*?)\)\s+\"(.*?)\"/",$value,$matches)){
+                                //print_r($matches);
+                                $j=0;
+                                foreach($matches as $val){
+                                        if(!empty($val)){
+                                        $configArr[$count][$j]=trim($val[0]);
+                                        $j+=1;
+                                        }
+                                }
+                        }else{
+                                $configArr[$count][0]="";
+                                $configArr[$count][1]="";
+                                $configArr[$count][2]="";
+                                $configArr[$count][3]=$value;
+                        }
+                $count+=1;
+                }
+                
+                
+        }
+fclose($handle);
+/*print "<pre>";
+print_r($configArr);
+print "</pre>";
+exit;*/
+//}
+/*$reuwestURL=($_SERVER['REQUEST_URI']);
+$usernameArr=explode('/',$reuwestURL);
+//print_r($usernameArr);
+$username=substr($usernameArr[1],1,strlen($usernameArr[1]));
+$firstParam="/home2/".$username."/public_html/cgi-bin/vmg_lib/cfg";*/
+/*shell_exec("cd ..");
+shell_exec("cd ..");
+shell_exec("cd ".$firstParam);
+print $configfiles=shell_exec("ls");*/
+##$firstParam_dir="/home2/".$nodeusername."/public_html/cgi-bin/vmg_lib/server_cfgs_repository/".$username."/";
+
+$firstParam_dir="../vmg_lib/server_cfgs_repository/".$username."/";
+
+if ($handle = opendir($firstParam_dir)) {
+    //echo "Directory handle: $handle\n";
+    //echo "Files:\n";
+        $cfgFileArray=array();
+        $l=0;
+    /* This is the correct way to loop over the directory. */
+    while (false !== ($file = readdir($handle))) {
+        if(preg_match("/(.cfg)/",$file)){
+                        $cfgFileArray[$l]=$file;
+                        $l+=1;
+                }
+    }
+
+    closedir($handle);
+}
+/*print "<pre>";
+print_r($cfgFileArray);
+print "</pre>";
+exit;*/
+$vmgArray=array('10.32.97.31'=>'TinkerBell(10.32.97.31)',
+'10.32.97.32'=>'Goofy(10.32.97.32)',
+'10.32.99.31'=>'Nemo(10.32.99.31)',
+'10.32.97.37'=>'Tweety(10.32.97.37)',
+'10.32.98.140'=>'Simba(10.32.98.140)',
+'10.32.98.142'=>'Pluto(10.32.98.142)',
+'10.32.97.170'=>'SQA(10.32.97.170)',
+'10.32.98.141'=>'Pinky(10.32.98.141)',
+'10.33.0.56'=>'Mars(10.33.0.56)',
+'10.33.0.53'=>'Neptune(10.33.0.53)',
+'10.33.0.59'=>'Mercury(10.33.0.59)',
+'10.33.0.50'=>'Venus(10.33.0.50)',
+'10.33.1.52'=>'Paul(10.33.1.52)')
+
+;?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>VMG UI Test Automation</title>
+<link rel="icon" href="rgbfav.ico" />
+<style type="text/css">
+<!--
+body{
+margin:0px;
+}
+.header_text{
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:18px;
+font-style:italic;
+font-weight:bold;
+color:#000;
+}
+td {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:normal;
+color:#333333;}
+-->
+</style>
+<script language="javascript">
+function loadcfg(val){
+        if(val.value!="")
+        var retVal=confirm("You are about to override the running config,Do you want to continue?");
+        if(retVal)
+        window.location.href='configuration.php?cfg='+val.value;
+        else{
+        window.location.href='configuration.php?cfg=';
+        }
+}
+/*function saveCfg(){
+        if(!document.f1.agree.checked){
+        alert("Please agree before update the configuration file");
+        document.f1.agree.focus();
+        return false;
+        }
+}*/
+</script>
+</head>
+
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top"><table width="800" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="288" align="left" valign="bottom"><a href="home.php" style="font-size:medium;">Home</a></td>
+        <td width="512" align="center" valign="middle" class="header_text"><img src="img/RGB_Logo.jpg" alt="" width="200" height="63" align="left" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="border-bottom:#999999 1px solid;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><table width="700" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="40" align="center" valign="middle" class="header_text"><span style="border-bottom:#999999 1px solid;">VMG UI Test Automation Framework Schedule</span></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+                <form name="f1" action="saveconfig.php" method="post" enctype="multipart/form-data" onsubmit="return saveCfg();">
+                <table width="750" border="1" align="center" cellpadding="0" cellspacing="0">
+                <!--<tr>
+        <td height="40" align="center" valign="middle" colspan="3"><a href="viewConfiguration.php" title="View existing Configuration File" target="_blank">Please check configuartion file</a></td>
+      </tr>-->
+                <tr><td align="center" valign="middle" colspan="4"><?php if(isset($_REQUEST['up']) && $_REQUEST['up']==1){?><font color="#FF0000">File has been successfully updated<?php }?></font></td></tr>
+                <tr>
+                <td align="center" valign="middle" colspan="4">&nbsp;<strong>Select VMG</strong>
+                <select name='conffile' onchange="loadcfg(this);">
+                <option value="">Select Configuration File</option>
+                <?php
+                foreach($cfgFileArray as $value){
+                        $cfgval=explode('.',$value);
+                        $vmgindex=$cfgval[2].".".$cfgval[3].".".$cfgval[4].".".$cfgval[5];
+                ?>
+                <option value="<?php print $vmgindex;?>"<?php if(@$_REQUEST['cfg']==$vmgindex){echo "selected";}?>><?php print $vmgArray[$vmgindex];?></option>
+                <?php
+                }
+                ?>
+                </select>&nbsp;&nbsp;&nbsp;<!--<a href="viewConfiguration.php" title="View existing Configuration File" target="_blank">Please check configuartion file</a>--></td>
+                <!--<td align="left" valign="middle">&nbsp;</td>-->
+                </tr>
+                
+                <tr id="test">
+                                <?php
+                                $comment="";
+                                $gigCounter=0;
+                                $textFieldCount=1;
+                                if(isset($_REQUEST['cfg']) && $_REQUEST['cfg']!=""){
+                                $t=1; 
+                                foreach($configArr as $value){
+                                        //print $t;
+                                        if((preg_match("/#ZNWZ/",$value[3]))||(preg_match("/#ZNGZ/",$value[3]))){
+                                        $comment=$value[3];
+                                        ?>
+                                        <input type="hidden" name="heading-<?php print $t;?>" value="<?php print $value[3];?>" />
+                                        <?php
+                                        }
+                                        if((preg_match("/^#ZBSZ/",$value[3])) || (preg_match("/^#ZNSZ/",$value[3]))){
+                                                        if(preg_match("/^#ZBSZ/",$value[3])){
+                                                        $tdHeading='<td colspan="4" align="center" valign="middle" bgcolor="#CCCCCC"><b>'.str_replace("#ZBSZ","",$value[3]).'</b></td>';
+                                                        }
+                                                        if(preg_match("/^#ZNSZ/",$value[3])){
+                                                        $tdHeading='<td colspan="4" align="center" valign="middle" bgcolor="#CCCCCC">'.str_replace("#ZNSZ","",$value[3]).'</td>';
+                                                        }
+                                        ?>
+                                        <input type="hidden" name="heading-<?php print $t;?>" value="<?php print $value[3];?>" />
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if((!preg_match("/#ZNGZ/",$value[3])) && (!preg_match("/#Count/i",$value[3])) && (!preg_match("/#ZNWZ/",$value[3]))){
+                                                
+                                        if(preg_match("/^#ZBSZ/",$value[3]))
+                                                print $tdHeading;
+                                        if(preg_match("/^#ZNSZ/",$value[3]))
+                                                print $tdHeading;
+                                        $prefix=$value[1];
+                                        //print "<br>";
+                                        ?>
+<!--                                    <input type="hidden" name="Comment-<?php print $t;?>" value="<?php print $value[3];?>" />
+-->                                     <?php
+
+                                        //print "asdasd".$value[2].$value[3];
+                                        //print "<br>";
+                                        //}
+                                        ?>
+                                        
+                                   </tr>
+                                        <?php
+                                        $t+=1;
+                                        //}//else{
+                                        if($comment!=""){
+                                                if(preg_match("/^#ZNGZ/",$comment)){
+                                                        $bgcolor='#00FF99';
+                                                        $commentStr="<b>".str_replace("#ZNGZ","",$comment)."</b>";
+                                                }
+                                                if(preg_match("/^#ZNWZ/",$comment)){
+                                                        $bgcolor='#ffffff';
+                                                        $commentStr="<b>".str_replace("#ZNWZ","",$comment)."</b>";
+                                                }
+                                        ?>
+                                        <tr style="border:#F00 solid 5px" bgcolor="<?php print $bgcolor;?>">
+                                                <td width="120" align="left" valign="middle"><?php if($bgcolor=='#00FF99')print $textFieldCount;?></td>
+                                          <td width="220" align="left" valign="middle"><?php print $value[2];?>
+                                         </td>
+                                          <td width="90" align="left" valign="middle"><input type="text" name="<?php print $prefix?>-<?php print $value[2];?>" id="button3" value="<?php print $value[3];?>" />&nbsp;</td>
+                                          <td width="260" align="left" valign="middle">&nbsp;
+                                          <?php
+                                          $textFieldCount+=1; 
+                                          if(strlen($commentStr)>12)
+                                                print $commentStr;
+                                                //print "(".$commentStr.")";
+                                          else
+                                                print $commentStr;
+                                          ?>
+                                          </td>
+                                          
+                                        </tr>
+                                        <?php
+                                        $comment="";
+                                          }else{
+                                                  if(!preg_match("/^#Z/",$value[3])){
+                                                        if(preg_match("/^#gig/",$value[3])){
+                                                                $prefix='gig-'.$gigCounter;
+                                                                $gigCounter+=1;
+                                                        }
+                                                        else if(preg_match("/^#card/",$value[3])){
+                                                                $prefix='card-card';
+                                                        }
+                                                        else{
+                                                                $prefix=$value[1];
+                                                        }
+                                                  ?>
+                                                  <input type="hidden" name="<?php print $prefix?>-<?php print $value[2];?>" id="button3" value="<?php print $value[3];?>" />
+                                                  <?php
+                                                  }
+                                          }
+                                        } 
+                                }
+                                ?>
+                                <!--    <tr>
+                                      <td colspan="2" align="center" valign="middle"><input type="checkbox" name='agree' value="agree" />Do you agree to update your existing configuration file&nbsp;&nbsp;                                      </td>
+                        </tr>-->
+                            <tr>
+                                <td colspan="4" align="center" valign="middle">
+                                <input type="submit" name="Submit" id="button3" value="Update" />                               </td>
+              </tr>
+                          <?php
+                          }
+                          else{
+                                $t=1; 
+                                foreach($configArr as $value){
+                                        if((preg_match("/#ZNWZ/",$value[3]))||(preg_match("/#ZNGZ/",$value[3]))){
+                                        $comment=$value[3];
+                                        ?>
+                                        <input type="hidden" name="heading-<?php print $t;?>" value="<?php print $value[3];?>" />
+                                        <?php
+                                        }
+                                        if((preg_match("/^#ZBSZ/",$value[3])) || (preg_match("/^#ZNSZ/",$value[3]))){
+                                                        if(preg_match("/^#ZBSZ/",$value[3])){
+                                                        $tdHeading='<td colspan="2" align="center" valign="middle" bgcolor="#CCCCCC"><b>'.str_replace("#ZBSZ","",$value[3]).'</b></td>';
+                                                        }
+                                                        if(preg_match("/^#ZNSZ/",$value[3])){
+                                                        $tdHeading='<td colspan="2" align="center" valign="middle" bgcolor="#CCCCCC">'.str_replace("#ZNSZ","",$value[3]).'</td>';
+                                                        }
+                                        ?>
+                                        <input type="hidden" name="heading-<?php print $t;?>" value="<?php print $value[3];?>" />
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if((!preg_match("/#ZNGZ/",$value[3])) && (!preg_match("/#Count/i",$value[3])) && (!preg_match("/#ZNWZ/",$value[3]))){
+                                                
+                                        if(preg_match("/^#ZBSZ/",$value[3]))
+                                                print $tdHeading;
+                                        if(preg_match("/^#ZNSZ/",$value[3]))
+                                                print $tdHeading;
+                                                $prefix=substr($value[3],1,3);
+                                        ?>
+<!--                                    <input type="hidden" name="Comment-<?php print $t;?>" value="<?php print $value[3];?>" />
+-->                                     <?php
+
+                                        //print "asdasd".$value[2].$value[3];
+                                        //print "<br>";
+                                        //}
+                                        ?>
+                                        
+                                   </tr>
+                                        <?php
+                                        $t+=1;
+                                        //}//else{
+                                        if($comment!=""){
+                                                if(preg_match("/^#ZNGZ/",$comment)){
+                                                        $bgcolor='#00FF99';
+                                                        $commentStr="<b>".str_replace("#ZNGZ","",$comment)."</b>";
+                                                }
+                                                if(preg_match("/^#ZNWZ/",$comment)){
+                                                        $bgcolor='#ffffff';
+                                                        $commentStr="<b>".str_replace("#ZNWZ","",$comment)."</b>";
+                                                }
+                                        ?>
+                                        <tr bgcolor="<?php print $bgcolor;?>">
+                                          <td width="220" align="left" valign="middle"><?php print $value[2];?>
+                                         </td>
+                                          <td width="350" align="left" valign="middle" ><?php print $value[3];?>&nbsp;&nbsp;
+                                          <?php 
+                                          //$temp="(".$commentStr.")";
+                                          if(strlen($commentStr)>12)
+                                                print "(".$commentStr.")";
+                                          else
+                                                print $commentStr;
+                                          ?>
+                                          </td>
+                                        </tr>
+                                        <?php
+                                        $comment="";
+                                          }
+                                          if(!preg_match("/^#Z/",$value[3])){
+                                                if(preg_match("/^#gig/",$value[3])){
+                                                        $prefix='gig-'.$gigCounter;
+                                                        $gigCounter+=1;
+                                                }
+                                                else if(preg_match("/^#card/",$value[3])){
+                                                        $prefix='card-card';
+                                                }
+                                                else{
+                                                        $prefix=$value[1];
+                                                }
+                                          ?>
+                                          <input type="hidden" name="<?php print $prefix?>-<?php print $value[2];?>" id="button3" value="<?php print $value[3];?>" />
+                                          <?php
+                                          }
+                                        } 
+                                }
+                          
+                          }
+                        //print "</pre>";
+                          ?>
+        </table>
+                </form>
+                </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

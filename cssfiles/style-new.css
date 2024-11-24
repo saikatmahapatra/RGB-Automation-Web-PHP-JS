@@ -1,0 +1,146 @@
+/*New Style sheet*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	margin:0px 2px 0px 2px;
+}
+h1, h2, h3, h4, h5 {
+	color:#333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a {
+	color:#333;
+	/*font-size:13px;*/
+}
+a:hover {
+	color:#000;
+}
+
+
+.breadcrumb {
+	height:30px;
+	width:100%;
+	border-top:#000 solid 1px;
+	border-bottom:#000 solid 1px;/*background-color:#94C4E7;*/
+    
+}
+.breadcrumb ul {
+	padding:0px 0px 0px 0px !important;
+	margin: 5px 5px 5px 5px !important;
+}
+.breadcrumb ul li {
+	font-size:12px !important;
+	list-style:none;
+	float:left;
+	color:#333333;
+}
+.breadcrumb a {
+	text-decoration:none;
+	color:#FF0000;
+}
+.breadcrumb a:hover {
+	text-decoration:underline;
+	color:#333333;
+}
+.sep {
+	margin-right:10px;
+	margin-left:10px;
+	color:#000;
+}
+.sel-val {
+	/*font-style:italic;*/
+	font-weight:normal;
+	font-size:12px;
+}
+.clear {
+	clear:both;
+}
+.error {
+	color:#FF0000;
+}
+.logo_bg {
+	background-color:#000;
+}
+.app_title {
+	font-size:18px;
+	font-weight:bold;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+table .config-table{
+	border:solid 1px #999999;
+	border-radius:4px;
+	padding:5px 5px 5px 5px;
+}
+
+label. login-heading{font-weight:bold;}
+.table {
+    display:table;
+}
+.header {
+    display:table-header-group;
+    font-weight:bold;
+}
+.row {
+    display:table-row;
+	margin-bottom:5px;
+}
+.rowGroup {
+    display:table-row-group;
+	
+}
+.cell {
+    display:table-cell;
+    width:0%;
+}
+.debug_out{
+	color: #000066; margin:10px 20px 10px 20px;
+}
+
+.runningTestContainer{
+	color:#333;
+	margin:10px 20px 10px 20px;
+	border:#F00 dotted 1px;
+	line-height:20px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.runningTestTitle{
+	font-weight:bold;
+	color:#F00;
+	}
+.running{
+	border:#999999 dotted 1px;
+	width:100%;
+	margin-bottom:5px;
+}
+
+.processAbortResponse{
+	color:#0066FF;
+	font-weight:bold;
+	}
+.header_text{
+/*font-family:Georgia, "Times New Roman", Times, serif;*/
+font-size:15px;
+/*font-style:italic;*/
+font-weight:bold;
+color:#333333;
+}
+.header_text span{border-bottom: #333333 solid 1px;}
+.error {
+	color: red;
+	font-weight: bold;
+}
+.loginContainer{
+	margin-left:20px;
+	margin-right:20px;
+	/*border:#666 dotted 1px;
+	border-radius:5px;*/
+	padding-left:10px;
+	padding-right:10px;
+}
+.top-border{border-top: 1px solid #000000;}
+.welcome_user span a{
+	font-size:14px;
+	text-decoration:none;
+}

@@ -1,0 +1,85 @@
+#Configuration file for VMG UI
+
+
+SQA(tproject_name) "VMG_UI"
+SQA(tproject_id) "1"
+SQA(server_ip) "10.70.111.21"
+SQA(tsuite_name) ""
+SQA(tsuite_id) "10"
+SQA(tcasefilename) ""
+
+SQA(pass) "0"
+SQA(fail) "0"
+SQA(abort) "0"
+SQA(HOST_IP) "10.70.111.21"
+SQA(vmg_user) ""
+SQA(version) ""
+#time out for different elements of selenium
+
+SQA(selenium_default_timeout) "100000"
+SQA(selenium_speed) "1500"
+SQA(selenium_page_load) "90000"
+SQA(selenium_load_channels) "10"
+
+SQA(hip_port) "4444"
+
+SQA(timestamp) ""
+#Count result
+
+SQA(count_pass) ""
+SQA(count_fail) ""
+SQA(count_abort) ""
+
+#VMG 37
+
+SQA(vmg_ip) "10.32.97.37"
+SQA(cardtype_1) "TCM"
+
+
+#gige0
+SQA(gige0_ip) "192.168.47.1"
+SQA(gige0_mask) "255.255.255.0"
+SQA(gige0_gateway) "0.0.0.0"
+
+#gige1
+SQA(gige1_ip) "192.168.47.2"
+SQA(gige1_mask) "255.255.255.0"
+SQA(gige1_gateway) "0.0.0.0"
+
+
+#gige4
+SQA(gige4_ip) "192.168.37.1"
+SQA(gige4_mask) "255.255.255.0"
+SQA(gige4_gateway) "0.0.0.0"
+
+
+#WINDOWS
+WIN(testplanid) "3"
+WIN(testplanname) "VMG_UI_AUTO_WIN"
+WIN(platformname) "Mozilla"
+#set WIN(HOST_IP) "10.70.111.41"
+WIN(HOST_IP) "192.168.50.39"
+WIN(buildid) "2"
+WIN(tsuite_name) "Login"
+WIN(tsuite_id) "10"
+WIN(status) "0"
+
+#LINUX
+LIN(testplanid) "2"
+LIN(testplanname) "VMG_UI_AUTO_LINUX"
+LIN(platformname) "Mozilla"
+LIN(HOST_IP) "10.70.111.32"
+LIN(buildid) "1"
+LIN(tsuite_name) ""
+LIN(tsuite_id) "10"
+LIN(status) "1"
+
+#MACINTOSH
+MAC(testplanid) "4"
+MAC(testplanname) "VMG_UI_AUTO_MAC"
+MAC(platformname) "Safari"
+MAC(HOST_IP) "10.70.111.51"
+MAC(buildid) "3"
+MAC(tsuite_name) "Login"
+MAC(tsuite_id) "10"
+MAC(status) "0"
